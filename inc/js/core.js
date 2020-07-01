@@ -133,7 +133,7 @@ jQuery(document).ready(function($) {
 
 
   });
-
+/*
   $(window).on('load', function() {
       $('nav').slideDown(500);
       $('.busy-panel').removeClass('active');
@@ -143,7 +143,7 @@ jQuery(document).ready(function($) {
         $('.busy-panel').addClass('active');
         $('nav').slideUp(500);
     });
-
+*/
     /*$('.switch-wrapper').click(function(e){
       $(this).toggleClass('switched');
   });*/
