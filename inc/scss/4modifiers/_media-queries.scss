@@ -1,0 +1,69 @@
+/*! == MEDIA QUERIES == */
+
+@each $name, $size in $breakpoints {
+
+	@media (max-width: #{$size}) {
+        .container{
+            max-width: #{$size};
+        }
+	}
+}
+
+/*===========LARGE (1200px)==========*/
+
+@media only screen and (max-width: 1200px) {
+
+/*---GLOBALS---*/
+
+/*---HEADER---*/
+
+/*---CONTENT---*/
+
+/*---FOOTER---*/
+
+}/*---end large mq---*/
+
+
+/*===========MEDIUM (992px)==========*/
+
+@media only screen and (max-width: 992px) {
+
+	/*---GLOBALS---*/
+
+	/*---HEADER---*/
+
+	/*---CONTENT---*/
+
+	/*---FOOTER---*/
+
+}/*---end medium mq---*/
+
+
+/*===========SMALL (768px)==========*/
+
+@media only screen and (max-width: 768px) {
+
+	/*---GLOBALS---*/
+
+	/*---HEADER---*/
+
+	/*---CONTENT---*/
+
+	/*---FOOTER---*/
+
+}/*---end small mq---*/
+
+
+/*===========EXTRA SMALL (576px)==========*/
+
+@media only screen and (max-width: 576px) {
+
+/*---GLOBALS---*/
+
+/*---HEADER---*/
+
+/*---CONTENT---*/
+
+/*---FOOTER---*/
+
+}/*---end extra small mq---*/

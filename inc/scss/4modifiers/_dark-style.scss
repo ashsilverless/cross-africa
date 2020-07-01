@@ -1,0 +1,139 @@
+body.dark-theme {
+    background:$color_grey_darkest;
+    color: white;
+    nav {
+        background:$color_grey_darkest;
+        .menu-trigger {
+            &__icon {
+                span {
+                    background: white;
+                }
+                &:before,
+                &:after {
+                    background: white;
+                }
+            }
+        }
+        .logo {
+            svg {
+                path {
+                    fill:white;
+                }
+            }
+        }
+    }
+    .offscreen-nav {
+        background: $color_grey_darker;
+    }
+    .button {
+        color: white;
+    }
+    .container {
+        background:$color_grey_darkest;
+        color: white;
+        &.hero-wrapper {
+            background:transparent;
+        }
+    }
+    .heading, p, a {
+        color: $color_grey_lighter;
+    }
+
+    .switch-wrapper {
+      .switch-wrapper__switch {
+        background:#575757;
+        &:before {
+          left:1.5rem;
+          background:#979797;
+        }
+      }
+    }
+
+    .hero,
+    .small-leaders__item,
+    .expanding-section,
+    .map-block__country--item {
+        .heading, p, .button {
+            color: $color-grey-dark;
+        }
+        &.light-text,
+        &__body .content {
+            .heading, p {
+                color: white;
+            }
+        }
+    }
+
+    .map-block__map svg g.active path {
+        fill: $color-grey-mid;
+    }
+    .map-block__map svg g.active path.active {
+        fill: $color-grey-light;
+    }
+    .expanding-section {
+        &__head {
+            .button {
+                color: white;
+            }
+        }
+        &__body {
+            .button {
+                color: white;
+            }
+        }
+    }
+    .tabbed-section {
+        &__head--tab.active,
+        &__head--tab.active:before,
+        &__body--item {
+            background:$color-grey-darker;
+        }
+        &__head--tab {
+            background:$color-grey-dark;
+        }
+        &__body--item .toggle-list__item .head p {
+            background: $color-grey-mid;
+        }
+        &__body--item .toggle-list__item:after {
+            background: repeating-linear-gradient(0deg,transparent 0px,transparent 10px,#484848 10px,#484848 32px);
+        }
+    }
+    .itinerary-wrapper .button {
+        color: $color-grey-mid;
+        &:hover {
+            background:$color-grey-dark;
+            color: white;
+        }
+    }
+    article > .container {
+        background:$color-grey-lightest;
+        .heading, p {
+            color: $color-grey-dark;
+        }
+    }
+    .no-hero {
+        .heading {
+            color: $color-grey-lightest;
+        }
+    }
+    input, textarea {
+        color: white;
+    }
+    footer.footer {
+        .button__boxed {
+            color: $color-grey-dark;
+        }
+        .lower > .container {
+            background: $color_grey_darker;
+        }
+        .socket p,
+        .socket a {
+            color: $color_grey_lighter;
+        }
+        .logo-holder #silverless path,
+        .logo-holder #created path {
+            fill: $color_grey_lighter;
+        }
+    }
+
+}//Closing Tag

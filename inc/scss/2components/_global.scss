@@ -1,0 +1,135 @@
+html {
+        @include scrollbars(1em, $color_grey_light);
+        ::-webkit-scrollbar-thumb {
+        }
+        ::-webkit-scrollbar-track {
+
+        }
+}
+
+body {
+    @include scrollbars(1rem, $color_grey_light);
+    overflow-y: scroll;
+    margin:0;
+    font: $font_size + px / 20px $font_secondary;
+    background: $color_grey_lightest;
+    transition: background 1s ease, color 1s ease;
+    ::-webkit-scrollbar-thumb {
+    }
+    ::-webkit-scrollbar-track {
+    }
+}
+
+.container {
+    position: relative;
+}
+.button {
+    position: relative;
+    display: block;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: $font_size * 0.9px;
+    font-family: $font_secondary;
+    text-transform: uppercase;
+    color: $color_grey_darkest;
+    &:after {
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -1px;
+        width: 1px;
+        height: 1rem;
+        background: #6d6d6d;
+        transition: top .3s ease;
+    }
+    &:hover {
+        &:after {
+            top:.5rem;
+        }
+    }
+    &:hover {
+        cursor:pointer;
+    }
+    &__boxed {
+        border:1px solid white;
+        padding:.5rem 2rem;
+        transition:color .5s ease-out;
+        &:hover {
+            color: white;
+            &:before {
+                height: 100%;
+            }
+        }
+        &:before {
+            @include psuedoElement;
+            width: 100%;
+            height: 0;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            background:$color-grey-dark;
+            transition: all .3s linear;
+        }
+        &:after {
+            display: none;
+        }
+    }
+}
+.logo-holder {
+    #logo {
+        width:6rem;
+        height:auto;
+    }
+    #silverless {
+        opacity:0.6;
+        transition:opacity 0.5s ease-in-out;
+
+        path {
+            fill:$color-grey-dark;
+        }
+    }
+
+    #created {
+        opacity:0;
+        transform: translateY(50px);
+        transition: 1s transform ease, 2s opacity ease;
+
+        path {
+            fill:$color-grey-dark;
+        }
+    }
+
+    &:hover {
+        cursor:pointer;
+
+        #silverless {
+            opacity:0.8;
+        }
+
+        #created {
+              opacity:0.8;
+              transform: translateY(0);
+        }
+    }
+}
+.busy-panel {
+    position: fixed;
+    z-index: 200;
+    top:0;
+    left: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: $color_grey_lightest;
+    transition:top 1s ease;
+    &.active {
+        top:0;
+    }
+    svg {
+        width:20rem;
+    }
+}

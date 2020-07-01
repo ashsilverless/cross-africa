@@ -1,0 +1,54 @@
+/*=====MASTER GRID RULES=====*/
+.site-wrapper {
+    padding:0 1rem;
+}
+.container {
+    display:grid;
+    grid-template-columns: 10% 80% 10%;
+    max-width: $container-width;
+    margin: 0 auto;
+    background:$color_grey_lightest;
+    transition: background 1s ease, color 1s .25s ease;
+    &.grid-gap {
+        grid-gap:2em;
+    }
+    &__fullwidth {
+        max-width: none;
+    }
+    &.col-2 > div {
+        grid-column: 2/3;
+    }
+    &__narrow {
+    grid-template-columns: 15% 70% 15%;
+        > div {
+            grid-column: 2/3;
+        }
+    }
+    &__extra-narrow {
+        grid-template-columns: 25% 50% 25%;
+    }
+    &__white {
+        background:white;
+    }
+    &.hero-wrapper {
+        background: transparent;
+    }
+}
+.span-parent {
+    grid-column: 1/-1;
+}
+
+.col-thirds {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:2rem;
+}
+
+.page-section {
+    position: relative;
+    z-index: 150;
+    padding-bottom: 5rem;
+    > div > .heading {
+        margin-bottom: 2rem;
+    }
+}
