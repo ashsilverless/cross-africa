@@ -13,7 +13,7 @@ while ( have_rows('gallery') ) : the_row();?>
     <?php if($imageType == 'yes') :?>
 
     <div class="inline-wrapper">
-        <a href="<?php echo $image['url']; ?>" class="inline">
+        <a href="<?php echo $image['url']; ?>" class="lightbox-gallery inline">
             <img src="<?php echo $image['url']; ?>" />
         </a>
     </div>
