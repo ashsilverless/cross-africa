@@ -991,4 +991,25 @@
 }
 .mapboxgl-map {
     height: 50vh;
+    .marker {
+      background:#fff82a;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border:2px solid  white;
+      box-shadow: 2px 2px 4px hsla(0, 0%, 0%, 0.5);
+      cursor: pointer;
+    }
+    .mapboxgl-popup {
+      max-width: 200px;
+    }
+    .mapboxgl-popup-content {
+      text-align: center;
+      font-family: $font_secondary;
+      h3 {
+        font-family: $font_primary;
+        margin: 0 0 .5rem;
+        text-transform: uppercase;
+      }
+    }
 }
