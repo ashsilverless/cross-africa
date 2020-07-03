@@ -145,7 +145,8 @@
             .button {
                 grid-row: 3/4;
                 width:20rem;
-                margin: 0 0 2rem;
+                display: block;
+                margin: 0 auto;
                 color: white
             }
         }
