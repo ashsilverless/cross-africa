@@ -60,8 +60,10 @@ get_header();?>
                             $teamImage = get_sub_field('image');?>
                                 <div class="team-list__item">
                                     <div class="image">
-                                            <img <?php $thisImage = $teamImage;?>
-                                            src="<?php echo $thisImage['url'];?>"
+                                            <img <?php $thisImage = $teamImage;
+                                            $largeImage = $thisImage['sizes']['large'];
+                                            ?>
+                                            src="<?php echo $largeImage;?>"
                                             title="<?php echo $thisImage['title'];?>"
                                             alt="<?php echo $thisImage['alt'];?>"
                                             />
@@ -107,8 +109,10 @@ get_header();?>
                     $ctaImage = get_sub_field('background_image');?>
                     <div class="image-cta">
                         <div class="background-image">
-                            <img <?php $thisImage = $ctaImage;?>
-                            src="<?php echo $thisImage['url'];?>"
+                            <img <?php $thisImage = $ctaImage;
+                            $largeImage = $thisImage['sizes']['large'];
+                            ?>
+                            src="<?php echo $largeImage;?>"
                             title="<?php echo $thisImage['title'];?>"
                             alt="<?php echo $thisImage['alt'];?>"
                             />

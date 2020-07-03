@@ -33,8 +33,9 @@ while ( have_rows('gallery') ) : the_row();?>
 <div class="gallery__halves slide-up">
     <?php if( have_rows('half_images') ):
     while ( have_rows('half_images') ) : the_row();
-    $halfImage = get_sub_field('half_image');?>
-    <a href="<?php echo $halfImage['url']; ?>" class="lightbox-gallery" alt="<?php echo $halfImage['alt']; ?>"
+    $halfImage = get_sub_field('half_image');
+    $largeImage = $halfImage['sizes']['large'];?>
+    <a href="<?php echo $largeImage;?>" class="lightbox-gallery" alt="<?php echo $halfImage['alt']; ?>"
         style="background-image: url(<?php echo $halfImage['url']; ?>); height:<?php echo $imageHeight;?>vh;">
         <!--<?php echo $halfImage['caption']; ?>--></a>
     <?php endwhile; endif; //image repeater?>
@@ -46,9 +47,9 @@ while ( have_rows('gallery') ) : the_row();?>
     <?php $imageHeight = get_sub_field('height');?>
     <?php if( have_rows('half_images') ):
     while ( have_rows('half_images') ) : the_row();
-    $halfImage = get_sub_field('half_image');?>
-
-    <a href="<?php echo $halfImage['url']; ?>" class="lightbox-gallery" alt="<?php echo $halfImage['alt']; ?>"
+    $halfImage = get_sub_field('half_image');
+    $largeImage = $halfImage['sizes']['large'];?>
+    <a href="<?php echo $largeImage;?>" class="lightbox-gallery" alt="<?php echo $halfImage['alt']; ?>"
         style="background-image: url(<?php echo $halfImage['url']; ?>); height:<?php echo $imageHeight;?>vh;">
         <!--<?php echo $halfImage['caption']; ?>--></a>
     <?php endwhile; endif; //image repeater?>
@@ -61,8 +62,9 @@ while ( have_rows('gallery') ) : the_row();?>
     style="height:<?php echo $imageHeight;?>vh;">
     <?php if( have_rows('tri_images') ):
     while ( have_rows('tri_images') ) : the_row();
-    $halfImage = get_sub_field('tri_image');?>
-    <a href="<?php echo $halfImage['url']; ?>" class="lightbox-gallery" alt="<?php echo $halfImage['alt']; ?>"
+    $halfImage = get_sub_field('tri_image');
+    $largeImage = $halfImage['sizes']['large'];?>    
+    <a href="<?php echo $largeImage;?>" class="lightbox-gallery" alt="<?php echo $halfImage['alt']; ?>"
         style="background-image: url(<?php echo $halfImage['url']; ?>);">
         <!--<?php echo $halfImage['caption']; ?>--></a>
     <?php endwhile; endif; //image repeater?>

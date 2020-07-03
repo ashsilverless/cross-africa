@@ -17,8 +17,9 @@
             <div class="image">
                 <a href="<?php the_permalink();?>">
                     <div class="background-image">
-                        <img <?php $thisImage = $postImage;?>
-                        src="<?php echo $thisImage['url'];?>"
+                        <img <?php $thisImage = $postImage;
+                        $largeImage = $thisImage['sizes']['large'];?>
+                        src="<?php echo $largeImage;?>"
                         title="<?php echo $thisImage['title'];?>"
                         alt="<?php echo $thisImage['alt'];?>"
                         />

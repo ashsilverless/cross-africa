@@ -59,8 +59,9 @@ get_header();?>
             $cleanSlug = str_replace('-', '', $post_slug);
             echo $cleanSlug;?>">
                 <div class="background-image">
-                    <img <?php $thisImage = $countryImage;?>
-                    src="<?php echo $thisImage['url'];?>"
+                    <img <?php $thisImage = $countryImage;$largeImage = $thisImage['sizes']['large'];
+                    ?>
+                    src="<?php echo $largeImage;?>"
                     title="<?php echo $thisImage['title'];?>"
                     alt="<?php echo $thisImage['alt'];?>"
                     />

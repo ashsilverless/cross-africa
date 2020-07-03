@@ -15,8 +15,10 @@ endwhile; endif;?>
     echo 'light-text';
 }?>">
                 <div class="background-image">
-                    <img <?php $thisImage = $leaderImage;?>
-                    src="<?php echo $thisImage['url'];?>"
+                    <img <?php $thisImage = $leaderImage;
+                    $smallImage = $thisImage['sizes']['large'];
+                    ?>
+                    src="<?php echo $smallImage;?>"
                     title="<?php echo $thisImage['title'];?>"
                     alt="<?php echo $thisImage['alt'];?>"
                     />

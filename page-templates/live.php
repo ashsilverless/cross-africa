@@ -13,8 +13,10 @@ get_header();?>
         <div class="expanding-section">
             <div class="expanding-section__head">
                 <div class="background-image">
-                    <img <?php $thisImage = $expandingImage;?>
-                    src="<?php echo $thisImage['url'];?>"
+                    <img <?php $thisImage = $expandingImage;
+                    $largeImage = $thisImage['sizes']['large'];
+                    ?>
+                    src="<?php echo $largeImage;?>"
                     title="<?php echo $thisImage['title'];?>"
                     alt="<?php echo $thisImage['alt'];?>"
                     />
