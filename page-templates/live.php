@@ -31,11 +31,13 @@ get_header();?>
                 <div class="content">
                     <h2 class="heading heading__3"><?php the_sub_field('safari_title');?></h2>
                     <p><?php the_sub_field('copy');?></p>
+                    <?php if(get_sub_field('read_more_copy')):?>
                     <div class="read-more-wrapper">
                     <p><?php the_sub_field('read_more_copy');?></p>
                     <a href="" class="button read-more-wrapper--close">Read Less</a>
                     </div>
                     <a href="" class="button read-more--open">Read More</a>
+                <?php endif;?>
                 </div>
             </div>
         </div>

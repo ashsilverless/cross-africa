@@ -77,6 +77,12 @@ body {
         }
     }
 }
+.button-wrapper {
+    text-align: center;
+    .button {
+        display: inline-block;
+    }
+}
 .logo-holder {
     #logo {
         width:6rem;
