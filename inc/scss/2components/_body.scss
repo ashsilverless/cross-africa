@@ -108,7 +108,7 @@
 
 .introduction {
     grid-column: 2/3;
-    width: 50%;
+    width: 60%;
     margin:0 auto;
     .heading {
         margin:3rem 0 2rem;
@@ -649,7 +649,7 @@
     &__item {
         margin-bottom: 2rem;
         .head {
-            padding: 1rem 5rem;
+            padding: 1rem 0;
             background:$color_grey_dark;
             cursor: pointer;
             .heading {
@@ -657,6 +657,11 @@
                 align-items: center;
                 grid-template-columns: 20% 60% 20%;
                 color: white;
+                span:first-of-type {
+                    padding:0 2rem;
+                    font-family: $font_secondary;
+                    font-weight: 300;
+                }
             }
         }
 
@@ -698,7 +703,7 @@
             .content {
                 display: grid;
                 grid-template-columns: 20% 60% 20%;
-                padding:2rem 5rem;
+                padding:2rem 0;
                 background:$color_grey_dark;
                 p,
                 .button {

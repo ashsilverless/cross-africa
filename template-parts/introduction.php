@@ -1,4 +1,4 @@
-<div class="container page-section">
+<div class="container container__narrow page-section">
     <div class="introduction">
         <h3 class="heading heading__5 heading__accent"><?php the_field('heading');?></h3>
         <p><?php the_field('introduction_copy');?></p>
