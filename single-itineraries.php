@@ -12,7 +12,7 @@ get_header(); ?>
 		while( have_rows('daily_activity') ): the_row();?>
 			<div class="itinerary-wrapper__item js-toggle-parent">
 				<div class="head js-toggle-trigger">
-					<h2 class="heading heading__4">
+					<h2 class="heading heading__5">
 						<span><?php the_sub_field('day');?></span>
 						<span><?php the_sub_field('activity_heading');?></span>
 					</h2>
