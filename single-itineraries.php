@@ -73,8 +73,8 @@ map.addControl(new mapboxgl.NavigationControl());
 ?>
 
 var boundingBox = [
-	[<?php echo $firstLatPosition ?>, <?php echo $firstLongPosition ?>],
-	[<?php echo $lastLatPosition ?>, <?php echo $lastLongPosition ?>]
+	[<?php echo $firstLongPosition ?>, <?php echo $firstLatPosition ?>],
+	[<?php echo $lastLongPosition ?>, <?php echo $lastLatPosition ?>]
 ];
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -100,7 +100,7 @@ map.on('load', function() {
 						$longPosn = get_sub_field('long');
 						?>
 
-						[<?php echo $latPosn ?>, <?php echo $longPosn ?>],
+						[<?php echo $longPosn ?>, <?php echo $latPosn ?>],
 					<?php endwhile; endif;?>
 				]
 			}
@@ -137,7 +137,7 @@ var geojson = {
 			{type: 'Feature',
 				geometry: {
 				type: 'Point',
-				coordinates: [<?php echo $latPosn ?>, <?php echo $longPosn ?>]
+				coordinates: [<?php echo $longPosn ?>, <?php echo $latPosn ?>]
 				},
 				properties: {
 					title: '<?php echo $dayHeading; ?>',
