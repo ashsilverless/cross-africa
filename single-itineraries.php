@@ -56,7 +56,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYXNobG91ZG9uIiwiYSI6ImNqb3pwZXl6djJudzQzcGxrZ
 var map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/mapbox/light-v10',
-	center: [-2.126398, 26.558285],
+	center: [-1.830765, 28.144188],
 	zoom: 8
 });
 map.addControl(new mapboxgl.NavigationControl());
@@ -79,7 +79,7 @@ var boundingBox = [
 
 document.addEventListener("DOMContentLoaded", function(event) {
 	map.fitBounds(boundingBox, {
-	padding: 80
+	zoom:7
 	});
 });
 
