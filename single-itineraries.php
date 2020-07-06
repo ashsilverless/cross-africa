@@ -57,6 +57,7 @@ var map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/ashloudon/ck7ymql2d0bzo1im85281r0vo',
 	center: [-1.830765, 28.144188],
+	pitch: 50,
 	zoom: 8
 });
 map.addControl(new mapboxgl.NavigationControl());
@@ -120,7 +121,6 @@ map.on('load', function() {
 			'line-dasharray': [0.1, 1.8]
 		}
 	});
-
 });
 
 var geojson = {
@@ -160,7 +160,9 @@ geojson.features.forEach(function(marker) {
 	.setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
 	  .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
 	.addTo(map);
+
 });
+
 </script>
 
 <?php get_footer(); ?>
