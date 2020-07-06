@@ -1012,10 +1012,24 @@
     .mapboxgl-popup-content {
       text-align: center;
       font-family: $font_secondary;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.2);
       h3 {
         font-family: $font_primary;
-        margin: 0 0 .5rem;
+        margin: 0;
+        padding: .25rem;
         text-transform: uppercase;
+        background: $color-grey-dark;
+        color: white;
+      }
+      p {
+          margin:0;
+          padding: .25rem;
+          color: $color-grey-dark;
+      }
+      .mapboxgl-popup-close-button {
+          color: white;
       }
     }
 }
