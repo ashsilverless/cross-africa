@@ -49,7 +49,7 @@ get_header(); ?>
 
 <h3 class="heading heading__4 heading__accent" style="margin-bottom:3rem;">Other Itineraries</h3>
 <?php get_template_part('template-parts/itinerary-leaders');?>
-<button id="fit">Fit to Kenya</button>
+
 <script type="text/javascript">
 mapboxgl.accessToken = 'pk.eyJ1IjoiYXNobG91ZG9uIiwiYSI6ImNqb3pwZXl6djJudzQzcGxrZWcwaW5tZXkifQ.OeAVB7SvtuUl25boyEYkaQ';
 
@@ -166,74 +166,3 @@ geojson.features.forEach(function(marker) {
 </script>
 
 <?php get_footer(); ?>
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<script type="text/javascript">
-	mapboxgl.accessToken = 'pk.eyJ1IjoiYXNobG91ZG9uIiwiYSI6ImNqb3pwZXl6djJudzQzcGxrZWcwaW5tZXkifQ.OeAVB7SvtuUl25boyEYkaQ';
-
-var map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/ashloudon/ck7ymql2d0bzo1im85281r0vo',
-center: [23.4181, -19.9953],
-zoom: 6
-});
-map.on('load', function() {
-map.addSource('route', {
-'type': 'geojson',
-'data': {
-'type': 'Feature',
-'properties': {},
-'geometry': {
-'type': 'LineString',
-<?php if( have_rows('daily_activity') ):
-while( have_rows('daily_activity') ): the_row();
-$latPosn = get_sub_field('lat');
-$longPosn = get_sub_field('long');
-?>
-var latPosn = "<?php echo $latPosn ?>";
-var longPosn = "<?php echo $longPosn ?>";
-'coordinates': [
-	[latPosn, longPosn],
-]
-<?php endwhile; endif;?>
-}
-}
-});
-map.addLayer({
-'id': 'route',
-'type': 'line',
-'source': 'route',
-'layout': {
-'line-join': 'round',
-'line-cap': 'round'
-},
-'paint': {
-'line-color': '#888',
-'line-width': 8
-}
-});
-});
-<?php if( have_rows('daily_activity') ):
-while( have_rows('daily_activity') ): the_row();
-$latPosn = get_sub_field('lat');
-$longPosn = get_sub_field('long');
-?>
-var latPosn = "<?php echo $latPosn ?>";
-var longPosn = "<?php echo $longPosn ?>";
-var marker = new mapboxgl.Marker()
-.setLngLat([latPosn, longPosn]).addTo(map);
-//console.log(latPosn);
-
-<?php endwhile; endif;?>
-
-</script>-->
