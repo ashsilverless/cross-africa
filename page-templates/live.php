@@ -21,7 +21,9 @@ get_header();?>
                     alt="<?php echo $thisImage['alt'];?>"
                     />
                 </div>
-                <div class="content">
+                <div class="content <?php if( get_sub_field('light_text')){
+                    echo 'light-text';
+                }?>">
                     <h2 class="heading heading__3"><?php the_sub_field('safari_title');?></h2>
                     <p class="button button__boxed expanding-section__trigger">Find Out More</p>
                 </div>

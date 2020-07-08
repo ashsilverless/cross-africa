@@ -139,6 +139,11 @@
             justify-content: center;
             height: 100%;
             text-align: center;
+            &.light-text {
+                > .heading {
+                    color: white;
+                }
+            }
             .heading {
                 grid-row: 2/3;
             }
@@ -370,7 +375,7 @@
         text-align: center;
         .image {
             position: relative;
-            height: 10rem;
+            height: 13rem;
             margin-bottom: 1rem;
         }
         .entry-date,

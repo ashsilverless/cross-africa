@@ -78,7 +78,7 @@
 			<?php if ( is_page_template( 'page-templates/home.php' ) ) {
 			    get_template_part('template-parts/home-hero');
 				get_template_part('template-parts/introduction');
-			} elseif ( is_page_template( array( 'page-templates/gallery.php', 'page-templates/contact.php', 'page-templates/news.php' )) ){
+			} elseif ( is_page_template( array( 'page-templates/gallery.php', 'page-templates/contact.php', 'page-templates/news.php', 'page-templates/terms-privacy.php' )) ){
 				get_template_part('template-parts/no-hero');
 			} elseif ( is_singular('post') ){
 				get_template_part('template-parts/hero');
