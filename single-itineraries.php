@@ -79,8 +79,9 @@ var boundingBox = [
 ];
 
 document.addEventListener("DOMContentLoaded", function(event) {
+	event.preventDefault;
 	map.fitBounds(boundingBox, {
-	padding:150,
+	padding:180,
 	});
 });
 

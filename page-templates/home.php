@@ -17,4 +17,18 @@ get_header();?>
 
 <?php get_template_part('template-parts/news-leaders');?>
 
+<div class="container col-2 page-section">
+    <div class="owl-carousel partners-carousel">
+        <?php if( have_rows('partner_logos', 'options') ):
+        while( have_rows('partner_logos', 'options') ): the_row();
+        $leaderImage = get_sub_field('image');?>
+        <div class="partners-carousel__item">
+            <img src="<?=$leaderImage['url'];?>"/>
+        </div>
+    <?php endwhile; endif;?>
+    </div>
+</div>
+
+
+
 <?php get_footer();?>

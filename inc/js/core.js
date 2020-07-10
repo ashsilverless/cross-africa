@@ -302,6 +302,40 @@ $(document).ready(function() {
     owlItinerary.trigger('prev.owl.carousel');
   });
 
+  var owlPartners = $('.owl-carousel.partners-carousel');
+  owlPartners.owlCarousel({
+      loop:true,
+      margin:0,
+      nav:false,
+      lazyLoad: true,
+      dots: false,
+      autoplay:true,
+      responsive:{
+          0:{
+              items:2
+          },
+          600:{
+              items:3
+          },
+          800:{
+              items:4
+          },
+          1200:{
+              items:5
+          }
+      },
+  });
+
+  $(".owl-next").click(function() {
+    owlItinerary.trigger('nextPartner.owl.carousel');
+  });
+  $('.owl-prev').click(function() {
+    owlItinerary.trigger('prevPartner.owl.carousel');
+  });
+
+
+
+
   $(document).ready(function() {
 
       $('.gallery').magnificPopup({
