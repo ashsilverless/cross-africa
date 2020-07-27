@@ -91,6 +91,9 @@
                 opacity: 0;
                 transition: opacity 1s 3s ease;
             }
+            path {
+                fill:$color_grey_mid;
+            }
         }
     }
     &.light-text {
