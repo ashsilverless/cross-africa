@@ -9,6 +9,10 @@ $size in $breakpoints {
     }
 }
 
+.mobile {
+    display: none;
+}
+
 /*===========LARGE (1200px)==========*/
 
 @media only screen and(max-width: 1200px) {
@@ -29,10 +33,64 @@ $size in $breakpoints {
 @media only screen and(max-width: 992px) {
     /*---GLOBALS---*/
 
+    .mobile {
+        display: block;
+    }
+
     /*---HEADER---*/
     .switch-wrapper {
         display: none;
     };
+
+nav {
+    .menu-trigger {
+        text-align: right;
+        &__icon {
+            left:unset;
+            right:0;
+        }
+    }
+}
+
+.tabbed-section {
+    &__head {
+        display: none;
+    }
+    &__body {
+        display: block;
+        &--item {
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 2rem);
+            margin-bottom: 1rem;
+            padding:2rem 1rem;
+            &.visible {
+                display: flex;
+            }
+            .icon-list {
+                display: flex;
+                flex-direction: column;
+                &__item {
+                    margin-bottom: 2rem;
+                }
+            }
+            .team-list {
+                &__item {
+                    display: block;
+                    .image {
+                        width:50%;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+            .toggle-list {
+                &__item {
+                    width:100%;
+                }
+            }
+        }
+    }
+}
 
     /*---CONTENT---*/
 
@@ -207,4 +265,35 @@ $size in $breakpoints {
         grid-column: span 2;
     };
     /*---FOOTER---*/
+
+    footer.footer {
+        .upper {
+            >.container {
+                grid-template-columns: 1fr;
+                padding: 15rem 1rem 3rem;
+            }
+        }
+        .lower {
+            .left-col,
+            .right-col {
+                grid-column: 2/4;
+            }
+            .left-col {
+                margin-bottom: 2rem;
+            }
+        }
+        .socket {
+            .container {
+                .silverless {
+                    grid-row: 3;
+                    grid-column: span 2;
+                }
+                .copyright,
+                .termscons {
+                    grid-column: span 2;
+                    text-align: left;
+                }
+            }
+        }
+    }
 } /*---end extra small mq---*/

@@ -76,9 +76,11 @@ jQuery(document).ready(function ($) {
     var navHeight = $('nav').outerHeight();
     var scrollOffset = toggleTriggerHeight + navHeight;
     function scrollToTop() {
-      $('html, body').animate({
-        scrollTop: $(currentToggle).offset().top - scrollOffset
-      }, 'slow');
+        if ($('header').width() < 991 ){
+            $('html, body').animate({scrollTop: $(currentToggle).offset().top - 180}, 'slow');
+       } else {
+           $('html, body').animate({scrollTop: $(currentToggle).offset().top - scrollOffset}, 'slow');
+       }
     }
     setTimeout(scrollToTop, 400);
   });
@@ -133,20 +135,17 @@ jQuery(document).ready(function ($) {
 
 
   });
-  /*
-    $(window).on('load', function() {
-        $('nav').slideDown(500);
-        $('.busy-panel').removeClass('active');
-    });
-  
-      $(".menu-wrapper__item").click(function(e) {
-          $('.busy-panel').addClass('active');
-          $('nav').slideUp(500);
-      });
-  */
-  /*$('.switch-wrapper').click(function(e){
-    $(this).toggleClass('switched');
-});*/
+
+  $(".sub-menu__item").click(function (e) {
+    e.preventDefault();
+    var targetSection = $(this).attr("data-tab");
+    function scrollToTop() {
+      $('html, body').animate({
+        scrollTop: $('#' + targetSection).offset().top - 150
+      }, 'slow');
+    }
+    setTimeout(scrollToTop, 400);
+  });
 
 
 

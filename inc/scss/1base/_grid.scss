@@ -1,3 +1,4 @@
+/*! == GRID == */
 /*=====MASTER GRID RULES=====*/
 .site-wrapper {
   padding: 0 1rem;
@@ -5,6 +6,7 @@
 .container {
   display: grid;
   grid-template-columns: 10% 80% 10%;
+  overflow:hidden;
   max-width: $container-width;
   margin: 0 auto;
   background: $color_grey_lightest;
@@ -17,6 +19,9 @@
   }
   &.col-2 > div {
     grid-column: 2/3;
+  }
+  &.col-2 .tabbed-section {
+    grid-column: 1/4;
   }
   &__narrow {
     grid-template-columns: 15% 70% 15%;
@@ -51,7 +56,4 @@
   > div > .heading {
     margin-bottom: 2rem;
   }
-}
-.col-2 .tabbed-section {
-  grid-column: 1/4 !important;
 }

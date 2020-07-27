@@ -5,8 +5,21 @@
  * @package crossafrica
  */
 get_header();?>
-
-<div class="container col-2 page-section">
+<div class="sub-menu-wrapper">
+    <div class="sub-menu section mobile">
+        <?php if( have_rows('tabs') ):
+            $i = 1;
+        while( have_rows('tabs') ): the_row();?>
+        <a href="#<?php $anchorLink = get_sub_field('title');
+        $anchorLink = strtolower($anchorLink);
+        $anchorLink = str_replace(' ', '', $anchorLink);
+        echo $anchorLink;?>" class="sub-menu__item" data-tab="<?= $anchorLink;?>">
+            <h3 class="heading heading__5"><?php the_sub_field('title');?></h3>
+        </a>
+        <?php $i ++;?>
+        <?php endwhile; endif;?>
+    </div>
+    <div class="container col-2 page-section">
     <div class="tabbed-section">
         <div class="tabbed-section__head">
             <?php if( have_rows('tabs') ):
@@ -18,11 +31,15 @@ get_header();?>
             <?php $i ++;?>
             <?php endwhile; endif;?>
         </div>
+
         <div class="tabbed-section__body">
             <?php if( have_rows('tabs') ):
                 $i = 1;
             while( have_rows('tabs') ): the_row();?>
-            <div class="tabbed-section__body--item tab-number<?= $i;?>">
+            <div id="<?php $anchorLink = get_sub_field('title');
+            $anchorLink = strtolower($anchorLink);
+            $anchorLink = str_replace(' ', '', $anchorLink);
+            echo $anchorLink;?>"class="tabbed-section__body--item tab-number<?= $i;?>">
 
                 <?php
                 if( have_rows('content') ):
@@ -130,7 +147,7 @@ get_header();?>
 
     </div>
 </div>
-
+</div>
 <?php get_template_part('template-parts/small-leaders');?>
 
 <?php get_template_part('template-parts/news-leaders');?>
