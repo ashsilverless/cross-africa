@@ -17,7 +17,7 @@
 				/>
 			</div>
 			<div class="content">
-				<h4 class="heading heading__3"><?php the_field('footer_cta_text', 'options');?></h4>
+				<h4 class="heading heading__3 heading__dark"><?php the_field('footer_cta_text', 'options');?></h4>
 				<a href="<?php the_field('footer_cta_target', 'options');?>" class="button button__boxed"><?php the_field('footer_cta_button', 'options');?></a>
 			</div>
 		</div>
@@ -26,8 +26,8 @@
 		<div class="container">
 			<div class="left-col">
 				<p><strong>Support</strong></p>
-				<p>Phone: <?php the_field('telephone', 'options');?></p>
-				<p>Email: <?php the_field('email', 'options');?> </p>
+				<p>Phone: <span class="phonenumber"><?php the_field('telephone', 'options');?></span></p>
+				<p>Email: <span><?php the_field('email', 'options');?></span></p>
 				<div class="socials">
 		            <?php if( have_rows('social_links', 'option') ): while( have_rows('social_links', 'option') ): the_row(); ?>
 		            <a href="<?php the_sub_field('page_link'); ?>"><i class="fab fa-<?php the_sub_field('name'); ?>"></i></a>
@@ -51,10 +51,10 @@
 			<div class="silverless logo-holder">
 				<a href="https://silverless.co.uk"><?php get_template_part('inc/img/silverless', 'logo');?></a>
 			</div>
-			<div class="left-col">
+			<div class="left-col copyright">
 				<p>&copy; Cross Africa Safaris <?php echo date ('Y');?>.  All Rights Reserved</p>
 			</div>
-			<div class="right-col">
+			<div class="right-col termscons">
 				<a href="/terms-conditions">Terms & Conditions</a> |
 				<a href="/privacy">Privacy Policy</a>
 			</div>

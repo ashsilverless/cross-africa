@@ -60,14 +60,11 @@ get_header();?>
             echo $cleanSlug;?>">
                 <div class="background-image">
                     <img <?php $thisImage = $countryImage;$largeImage = $thisImage['sizes']['large'];
-                    ?>
-                    src="<?php echo $largeImage;?>"
-                    title="<?php echo $thisImage['title'];?>"
-                    alt="<?php echo $thisImage['alt'];?>"
-                    />
-                    <h2 class="heading heading__4"><?php the_title();?></h2>
+                    ?> src="<?php echo $largeImage;?>" title="<?php echo $thisImage['title'];?>"
+                        alt="<?php echo $thisImage['alt'];?>" />
+
                 </div>
-                <h3 class="heading heading__6"><?php the_field('introduction_heading');?></h3>
+                <h2 class="heading heading__4"><?php the_field('introduction_heading');?></h2>
                 <p><?php $destinationCopy = get_field('copy');
                     $destinationExcerpt = substr($destinationCopy, 0, 150);
                     echo $destinationExcerpt . '...';

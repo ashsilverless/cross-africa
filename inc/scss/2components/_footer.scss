@@ -1,17 +1,16 @@
 /*! == FOOTER == */
 footer.footer {
-
     p {
-        font-size: $font_size * .85px;
+        font-size: $font_size * 0.85px;
         color: white;
         strong {
             display: inline-block;
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
         }
     }
     a {
         color: white;
-        font-size: $font_size * .85px;
+        font-size: $font_size * 0.85px;
         font-weight: 200;
     }
     .container {
@@ -20,28 +19,29 @@ footer.footer {
     .content {
         position: relative;
         z-index: 100;
-        grid-column: 2/3;
+        grid-column: 2 / 3;
         .heading {
-            color: white;
+            ;
+            // color: white;
         }
     }
     .upper {
         > .container {
-            padding:15rem 0 3rem;
+            padding: 15rem 0 3rem;
         }
         &:hover {
             .background-image img {
-                filter:saturate(1);
+                filter: saturate(1);
             }
         }
     }
     .lower,
     .socket {
-        .left-col{
-            grid-column: 2/3;
+        .left-col {
+            grid-column: 2 / 3;
         }
         .right-col {
-            grid-column: 3/4;
+            grid-column: 3 / 4;
         }
         .links-menu {
             display: grid;
@@ -51,30 +51,30 @@ footer.footer {
     .lower {
         .container {
             padding: 3rem 0 2rem;
-            background:$color_grey_darkest;
+            background: $color_grey_darkest;
             color: white;
         }
     }
     .socket {
-        padding:3rem 0;
+        padding: 3rem 0;
         .silverless {
-            grid-column: 1/2;
+            grid-column: 1 / 2;
             svg {
-                width:6rem;
+                width: 6rem;
             }
         }
         p {
-            font-size: $font_size * .75px;
+            font-size: $font_size * 0.75px;
             color: $color-grey-mid;
         }
         a {
             color: $color-grey-mid;
-            font-size: $font_size * .75px;
+            font-size: $font_size * 0.75px;
             font-weight: 200;
         }
     }
     .socials {
-        margin-top:1rem;
+        margin-top: 1rem;
         i {
             margin-right: 1rem;
             font-size: $font_size * 1.2px;
@@ -83,10 +83,13 @@ footer.footer {
     .button__boxed {
         text-align: left;
         font-weight: 400;
-        background:white;
+        background: white;
         color: $color-grey-mid;
         &:after {
             display: none;
         }
     }
+}
+.termscons {
+    text-align: right;
 }

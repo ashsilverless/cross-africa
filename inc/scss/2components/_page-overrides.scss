@@ -1,7 +1,42 @@
 /*! == PAGE OVERRIDES == */
 
 .single-post {
-    .hero h2 {
-        display: none;
+  .hero h2 {
+    display: none;
+  }
+}
+
+.single {
+  .hero {
+    #logomark {
+      display: none;
     }
+  }
+}
+.page-template-love {
+  .introduction {
+    .heading {
+      font-size: 1.4em;
+      text-transform: unset;
+      font-family: rollerscript-rough, sans-serif;
+      span {
+        text-transform: uppercase;
+        font-size: 0.8em;
+      }
+    }
+  }
+  .cite {
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    margin-top: -1rem;
+    font-size: 0.9rem;
+  }
+}
+.single {
+  .hero {
+    .heading__5 {
+      margin-bottom: 5rem;
+    }
+  }
 }

@@ -1,46 +1,55 @@
 html body {
-    font-size: $font_size *1px;
-    line-height: $font_line-height *1px;
-    font-family: $font_secondary;
-    font-weight: 300;
-    letter-spacing: 0.05rem;
-    color: $color_grey_mid;
+  font-size: $font_size * 1px;
+  line-height: $font_line-height * 1px;
+  font-family: $font_secondary;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  color: $color_grey_mid;
 }
 
 body p {
-    margin:0;
-    color: $color_grey_mid;
-    + p {
-        margin-top:1rem;
-    }
+  margin: 0;
+  color: $color_grey_mid;
+  + p {
+    margin-top: 1rem;
+  }
 
-    strong {
-        font-weight: 500;
-    }
+  strong {
+    font-weight: 500;
+  }
 }
 
 body a {
-    text-decoration:none;
-    font-weight: 500;
-    color: $color_grey_mid;
-    &:hover {
-        text-decoration: none;
-    }
+  text-decoration: none;
+  font-weight: 500;
+  color: $color_grey_mid;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
-h1, h2, h3 ,h4, h5, h6,
-.h1, .h2, .h3, .h4 .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4 .h5,
+.h6 {
   font-size: 1rem;
 }
 
 ul {
-  margin:1rem 0;
-  padding:0;
-  list-style:none;
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
   li {
-      list-style: circle;
-      margin-left: 20px;
-      margin-bottom: .5rem;
+    list-style: circle;
+    margin-left: 20px;
+    margin-bottom: 0.5rem;
     /*&:before {
       content: "• ";
       padding-right:10px;
@@ -51,55 +60,60 @@ ul {
 
 .heading {
   @include heading;
-  margin:0;
+  margin: 0;
   &__1 {
-    font: ($font_size*6)+px / ($font_line-height*2.7)+px $font_primary;
+    font: ($font_size * 6) + px / ($font_line-height * 2.7) + px $font_primary;
     text-transform: none;
   }
   &__2 {
-    font: ($font_size*4)+px / ($font_line-height*3)+px $font_primary;
+    font: ($font_size * 4) + px / ($font_line-height * 3) + px $font_primary;
     font-weight: 200;
   }
   &__3 {
-    font: ($font_size*1.8)+px / ($font_line-height*1.5)+px $font_primary;
+    font: ($font_size * 1.8) + px / ($font_line-height * 1.5) + px $font_primary;
     span {
-        font: ($font_size*1.5)+px / ($font_line-height*1.2)+px $font_primary;
+      font: ($font_size * 1.5) + px / ($font_line-height * 1.2) + px
+        $font_primary;
     }
   }
   &__4 {
-    font: ($font_size*1.4)+px / ($font_line-height*1)+px $font_primary;
+    font: ($font_size * 1.4) + px / ($font_line-height * 1) + px $font_primary;
   }
   &__5 {
-    font: ($font_size*1)+px / ($font_line-height*1.2)+px $font_primary;
+    font: ($font_size * 1) + px / ($font_line-height * 1.2) + px $font_primary;
   }
   &__6 {
-    font: ($font_size*.85)+px / ($font_line-height*1.5)+px $font_primary;
-
+    font: ($font_size * 0.85) + px / ($font_line-height * 1.5) + px
+      $font_primary;
   }
   &__7 {
-    font: ($font_size*.85)+px / ($font_line-height*1)+px $font_secondary;
+    font: ($font_size * 0.85) + px / ($font_line-height * 1) + px
+      $font_secondary;
     font-weight: 200;
   }
   &__accent {
-      position: relative;
-      margin-top: 3rem;
-      text-align: center;
-      &:after {
-          content:'';
-          position: absolute;
-          bottom: 100%;
-          left: 50%;
-          margin-left: -1px;
-          margin-bottom: 1rem;
-          width: 1px;
-          height: 2rem;
-          background: #6d6d6d;
-      }
+    position: relative;
+    margin-top: 3rem;
+    text-align: center;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -1px;
+      margin-bottom: 1rem;
+      width: 1px;
+      height: 2rem;
+      background: #6d6d6d;
+    }
   }
   &__lowercase {
-      text-transform: none;
+    text-transform: none;
   }
   &__alt-font {
-      font-family:$font_secondary;
+    font-family: $font_secondary;
+  }
+  &__dark {
+    color: $color_grey_mid;
   }
 }

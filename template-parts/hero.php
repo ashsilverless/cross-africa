@@ -4,12 +4,9 @@
     <div class="hero <?php if( get_field('light_text')){
         echo 'light-text';
     }?>">
-        <div class="hero__background background-image">
-            <img <?php $thisImage = $heroImage;?>
-            src="<?php echo $thisImage['url'];?>"
-            title="<?php echo $thisImage['title'];?>"
-            alt="<?php echo $thisImage['alt'];?>"
-            />
+        <div class="hero__background background-image <?php the_field('image_overlay');?>">
+            <img <?php $thisImage = $heroImage;?> src="<?php echo $thisImage['url'];?>"
+                title="<?php echo $thisImage['title'];?>" alt="<?php echo $thisImage['alt'];?>" />
         </div>
         <?php get_template_part('inc/img/logo-mark');?>
         <h1 class="heading heading__2"><?php the_field('headline');?></h1>
