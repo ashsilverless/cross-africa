@@ -105,7 +105,15 @@ nav {
     /*---HEADER---*/
     .switch-wrapper {
         display: none;
+        &.mobile {
+            display: block;
+            grid-column: span 2;
+            .switch-wrapper__label {
+                display: inline-block;
+            }
+        }
     }
+
     nav .menu-trigger {
         justify-self: flex-end;
         grid-column: 2 / 4;
@@ -114,11 +122,14 @@ nav {
     .offscreen-nav .menu-wrapper {
         grid-template-columns: repeat(2, 1fr);
         width: unset;
+        padding-top:4rem;
     }
     .offscreen-nav .menu-wrapper a:first-of-type {
         grid-row: 1 / 2;
     }
-
+    .scrolled .offscreen-nav .menu-wrapper {
+        padding-top:3rem;
+    }
     /*---CONTENT---*/
     .introduction {
         width: unset;

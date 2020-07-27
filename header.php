@@ -54,6 +54,11 @@
 							</a>
 						<?php endwhile;?>
 						<?php endif; //main menu loop?>
+						<div class="switch-wrapper mobile">
+							<span class="switch-wrapper__label">Light</span>
+							<span class="switch-wrapper__switch"></span>
+							<span class="switch-wrapper__label">Dark</span>
+						</div>
 					</div>
 				</div>
 				<div class="container">
