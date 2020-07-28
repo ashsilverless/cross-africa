@@ -6,8 +6,6 @@
  */
 get_header();?>
 
-
-
 <div class="container page-section">
     <div class="map-block">
         <div class="map-block__menu">
@@ -29,7 +27,11 @@ get_header();?>
                     $childItem = $childItem->post_title;
                     $childLower = strtolower ($childItem);
                     $cleanChild = str_replace(' ', '', $childLower);?>
-                    <div class="child" data-target="<?php echo $cleanChild;?>">
+                    <div class="child mobile">
+                        <a href="/destinations/<?=$cleanChild;?>"><?=$childItem;?></a>
+                    </div>
+
+                    <div class="child desktop" data-target="<?php echo $cleanChild;?>">
                         <?=$childItem;?>
                     </div>
                     <?php endwhile; endif;
@@ -38,13 +40,13 @@ get_header();?>
             </div>
             <?php endwhile; endif;?>
         </div>
-        <div class="map-block__map">
+        <div class="map-block__map desktop">
             <?php get_template_part('inc/img/africa-map');?>
             <div id="map-marker">
                 <div id="map-marker__line"></div>
             </div>
         </div>
-        <div class="map-block__country">
+        <div class="map-block__country desktop">
             <?php
             $loop = new WP_Query(
                 array(

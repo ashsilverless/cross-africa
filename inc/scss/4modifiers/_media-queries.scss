@@ -37,6 +37,9 @@ $size in $breakpoints {
         display: block;
     }
 
+.desktop {
+    display: none;
+}
     /*---HEADER---*/
     .switch-wrapper {
         display: none;
@@ -52,47 +55,70 @@ nav {
     }
 }
 
-.tabbed-section {
-    &__head {
-        display: none;
+    /*---CONTENT---*/
+    .loaded .home-hero .content {
+        top: 22vh;
     }
-    &__body {
-        display: block;
-        &--item {
-            display: flex;
-            flex-direction: column;
-            width: calc(100% - 2rem);
-            margin-bottom: 1rem;
-            padding:2rem 1rem;
-            &.visible {
-                display: flex;
-            }
-            .icon-list {
+    .hero.home-hero .content svg.logo-mark {
+    width: 6rem;
+    }
+    .hero.home-hero .content svg {
+        width: 85%;
+    }
+    .tabbed-section {
+        &__head {
+            display: none;
+        }
+        &__body {
+            display: block;
+            &--item {
                 display: flex;
                 flex-direction: column;
-                &__item {
-                    margin-bottom: 2rem;
+                width: calc(100% - 2rem);
+                margin-bottom: 1rem;
+                padding:2rem 1rem;
+                &.visible {
+                    display: flex;
                 }
-            }
-            .team-list {
-                &__item {
-                    display: block;
-                    .image {
-                        width:50%;
-                        margin-bottom: 1rem;
+                .icon-list {
+                    display: flex;
+                    flex-direction: column;
+                    &__item {
+                        margin-bottom: 2rem;
                     }
                 }
-            }
-            .toggle-list {
-                &__item {
-                    width:100%;
+                .team-list {
+                    &__item {
+                        display: block;
+                        .image {
+                            width:50%;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+                .toggle-list {
+                    &__item {
+                        width:100%;
+                    }
                 }
             }
         }
     }
-}
-
-    /*---CONTENT---*/
+    .map-block {
+        grid-template-rows: 1fr;
+        &__menu {
+            grid-column: 1/4;
+        }
+    }
+    .destination {
+        grid-template-columns: 1fr;
+        .location-panel {
+            grid-row: 2/3;
+        }
+        .cta {
+            grid-row: 3/4;
+        }
+    }
 
     /*---FOOTER---*/
 } /*---end medium mq---*/
@@ -243,26 +269,7 @@ nav {
     .itinerary-wrapper__item .body .content {
         grid-template-columns: 10% 80% 10%;
     }
-    .map-block {
-        grid-template-columns: 10% 80% 10%;
-        grid-template-rows: 1fr 1fr 1fr;
-        &__map {
-            grid-row: 1;
-            grid-column: 2;
-            height: unset;
-        }
-        &__menu {
-            grid-row: 2;
-            grid-column: 2;
-        }
-        &__country {
-            grid-row: 1;
-            grid-column: 2;
-        }
-        #map-marker__line {
-            display: none;
-        }
-    }
+
     .container__extra-narrow {
         grid-template-columns: 15% 70% 15%;
     }
