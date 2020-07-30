@@ -43,7 +43,7 @@ get_header(); ?>
     </div>
 </div>
 
-<div class="container container__narrow page-section">
+<div class="container container__narrow page-section map-wrapper">
     <div id="map"></div>
 </div>
 
@@ -80,9 +80,15 @@ var boundingBox = [
 
 document.addEventListener("DOMContentLoaded", function(event) {
     event.preventDefault;
-    map.fitBounds(boundingBox, {
-        padding: 180,
-    });
+    if (document.documentElement.clientWidth < 900) {
+        map.fitBounds(boundingBox, {
+            padding: 100,
+        });
+    } else {
+        map.fitBounds(boundingBox, {
+            padding: 140,
+        });
+    }
 });
 
 //Plot paths between markers
@@ -101,7 +107,7 @@ map.on('load', function() {
                     $latPosn = get_sub_field('lat');
                     $longPosn = get_sub_field('long'); ?>
 
-                    [ <?php echo $longPosn ?> , <?php echo $latPosn ?> ], 
+                    [ <?php echo $longPosn ?> , <?php echo $latPosn ?> ],
                     <?php endwhile;endif; ?>
                 ]
             }

@@ -3,7 +3,7 @@
 <div class="container hero-wrapper">
     <div class="hero home-hero">
         <div class="content">
-            <?php get_template_part('inc/img/logo-mark');?>
+            <!--<?php get_template_part('inc/img/logo-mark');?>-->
             <?php get_template_part('inc/img/logo-text');?>
         </div>
         <?php if( have_rows('images') ):

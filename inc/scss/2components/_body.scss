@@ -27,7 +27,8 @@
     display: grid;
     align-content: center;
     justify-content: center;
-    height: 75vh;
+    height: calc(75vh - 5rem);
+    padding-top: 5rem;
     svg {
         z-index: 50;
         display: block;
@@ -48,6 +49,7 @@
     &.no-hero {
         align-content: flex-end;
         height: 12rem;
+        padding-top:0;
         margin-bottom: 3rem;
     }
     &.home-hero {
@@ -106,7 +108,7 @@
     }
 }
 .loaded .home-hero .content {
-    top: 15vh;
+    top: 30vh;
     svg.logo-mark {
         opacity: 1;
     }
