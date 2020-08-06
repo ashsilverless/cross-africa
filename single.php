@@ -35,13 +35,14 @@ get_header(); ?>
 	<?php endwhile; endif; ?>
 </article>
 
-<div class="container col-2 page-section">
+<div class="container col-2">
     <div class="news-leaders">
     <h3 class="heading heading__4 heading__accent">Other News</h3>
     <?php $crossAfricaPosts = new WP_Query(array(
         'post_type'=>'post',
         'post_status'=>'publish',
-        'posts_per_page'=>9
+        'posts_per_page'=>9,
+		'post__not_in' => array( $post->ID )
     ));
     if ( $crossAfricaPosts->have_posts() ) :
     while ( $crossAfricaPosts->have_posts() ) :
@@ -66,8 +67,13 @@ get_header(); ?>
             <a href="<?php the_permalink();?>" class="button">Read More</a>
         </div>
     <?php endwhile; wp_reset_postdata();endif; ?>
-    <a href="/news" class="button button__boxed">See More News</a>
     </div>
+</div>
+<div class="container container__fullwidth align-center page-section">
+	<div></div>
+	<div>
+		<a href="/news" class="button button__boxed button__inline">See More News</a>
+	</div>
 </div>
 
 <?php get_footer(); ?>

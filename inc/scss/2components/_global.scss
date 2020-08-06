@@ -76,6 +76,9 @@ body {
             display: none;
         }
     }
+    &__inline {
+        display:inline-block;
+    }
 }
 .button-wrapper {
     text-align: center;
